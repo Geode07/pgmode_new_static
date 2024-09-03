@@ -84,8 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
 
-    // Check local storage for theme preference
-    const currentTheme = localStorage.getItem('theme');
+    // Check local storage for theme preference, set default to dark if not set
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+        currentTheme = 'dark';
+        localStorage.setItem('theme', 'dark'); // Persist dark mode as default
+    }
 
     if (currentTheme === 'dark') {
         body.classList.add('dark-mode');

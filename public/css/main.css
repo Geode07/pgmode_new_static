@@ -306,7 +306,7 @@ body {
   }
 
 :root {
-  --theme-light: rgb(212, 212, 212);
+  --theme-light: rgb(189, 188, 188);
   --entry-light: rgb(255, 245, 230);
   --primary-light: rgb(40, 40, 40);
   --secondary-light: rgb(195, 212, 101);
@@ -325,7 +325,7 @@ body {
   --code-block-bg-dark: rgb(46, 46, 51);
   --code-bg-dark: rgb(55, 56, 62);
   --border-dark: rgb(51, 51, 51);
-  --home-title-dark: rgb(234, 216, 173);
+  --home-title-dark: rgb(228, 221, 202);
 
   /* Default to dark theme variables */
   --primary: var(--primary-dark);
