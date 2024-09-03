@@ -1,6 +1,6 @@
 # Project Title
 
-PGMoDE static site.
+For PGMoDE static site.
 
 ## Table of Contents
 
