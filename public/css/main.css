@@ -13,7 +13,7 @@
 
 .navbar-brand {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", Ubuntu, "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
-    font-size: 58px; /* adjust as needed */
+    font-size: 50px; /* adjust as needed */
     font-weight: bold;
     color: var(--primary) !important;
   }
@@ -23,7 +23,7 @@
 }
 
 .navbar-subtitle {
-    font-size: 28px; /* Adjust as needed */
+    font-size: 22px; /* Adjust as needed */
     color: var(--primary) !important;
 }
 
@@ -33,6 +33,44 @@
   border: none;
   cursor: pointer;
 }
+
+/* Styling for SVG icons */
+.icon-button svg {
+  width: 16px;
+  height: 16px;
+  fill: none; /* Ensure fill is none to use stroke color */
+  stroke: currentColor; /* This will allow the color to be controlled via the text color */
+}
+
+/* Light mode: icons should be black */
+.light-mode .icon-button svg {
+  color: black;
+}
+
+/* Dark mode: icons should be white */
+.dark-mode .icon-button svg {
+  color: white;
+}
+
+/* Hide the non-active icon */
+.icon-button #sun, .icon-button #moon {
+  display: none;
+}
+
+/* Show the correct icon depending on the theme */
+.dark-mode .icon-button #sun {
+  display: inline;
+}
+
+.light-mode .icon-button #moon {
+  display: inline;
+}
+
+.icon-button:hover, .icon-button:focus {
+  /* Add styles for hover/focus to indicate it's clickable */
+  opacity: 0.9;
+}
+
 
 .navbar-nav {
   list-style: none; /* Removes bullet points */
@@ -44,14 +82,19 @@
 
 .nav-item {
   margin-right: 20px; /* Adds space between each navigation item */
-  font-size: 12px;
+  font-size: 9px;
 }
 
-.icon-button:hover, .icon-button:focus {
-  /* Add styles for hover/focus to indicate it's clickable */
-  opacity: 0.9;
+/* Remove underline from navbar links */
+.navbar-nav .nav-link {
+  text-decoration: none;
 }
 
+/* Optional: Add hover effect if desired */
+.navbar-nav .nav-link:hover {
+  text-decoration: none; /* Ensure underline doesn't appear on hover */
+  color: #000; /* Change color on hover if desired */
+}
 
 
 .portfolio-card {
@@ -131,7 +174,7 @@
 
 .home-blurb {
   margin-bottom: 20px;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center !important;  /* Force centering, use sparingly */
   font-style: italic;
   color: var(--home-title); 
@@ -158,9 +201,36 @@
 }
 
 
+/* Custom button styling */
 .custom-button {
-  text-align: center;
-  justify-content: center;
+  background-color: #63bc78; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding inside the button */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block; /* Block-level button */
+  font-size: 12px; /* Font size */
+  margin: 10px 0; /* Space around the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.custom-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+/* Apply consistent font style to all contact form fields */
+input, textarea {
+  font-family: Arial, sans-serif; /* Choose a consistent font */
+  font-size: 12px; /* Set a consistent font size */
+  color: #333; /* Set a consistent text color */
+  padding: 10px; /* Add consistent padding */
+  border: 1px solid #ccc; /* Set a consistent border */
+  border-radius: 4px; /* Add consistent rounded corners */
+  width: 100%; /* Make input and textarea full width */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
 
 /* Use flexbox to center the card in the middle of the page */
@@ -525,7 +595,7 @@ footer {
   }
 
   .home-blurb {
-    max-width: 30%;
+    max-width: 35%;
   }
 
 }
