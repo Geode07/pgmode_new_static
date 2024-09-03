@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "public",
+    "site": "pgmodebrochurev1",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "pgmodebrochurev1.web.app/*",
+        "destination": "https://pgmode.com/:splat",
+        "type": 301
+      },
+      {
+        "source": "pgmodebrochurev1.firebaseapp.com/*",
+        "destination": "https://pgmode.com/:splat",
+        "type": 301
+      }
+    ]
+  }
+}
