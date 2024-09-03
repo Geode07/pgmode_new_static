@@ -80,49 +80,39 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const themeToggle = document.getElementById('theme-toggle');
-        const moon = document.getElementById('moon');
-        const sun = document.getElementById('sun');
-        const body = document.body;
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-        // Check local storage for theme preference
-        const currentTheme = localStorage.getItem('theme');
+    // Check local storage for theme preference
+    const currentTheme = localStorage.getItem('theme');
 
-        if (currentTheme === 'dark') {
-            body.classList.add('dark-mode');
-            body.classList.remove('light-mode');
-            moon.style.display = 'none';
-            sun.style.display = 'inline';
-        } else if (currentTheme === 'light') {
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+    } else {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', function() {
+        if (body.classList.contains('dark-mode')) {
             body.classList.add('light-mode');
             body.classList.remove('dark-mode');
-            moon.style.display = 'inline';
-            sun.style.display = 'none';
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.classList.add('dark-mode');
+            body.classList.remove('light-mode');
+            localStorage.setItem('theme', 'dark');
         }
-
-        // Toggle theme on button click
-        themeToggle.addEventListener('click', function() {
-            if (body.classList.contains('dark-mode')) {
-                body.classList.add('light-mode');
-                body.classList.remove('dark-mode');
-                moon.style.display = 'inline';
-                sun.style.display = 'none';
-                localStorage.setItem('theme', 'light');
-            } else {
-                body.classList.add('dark-mode');
-                body.classList.remove('light-mode');
-                moon.style.display = 'none';
-                sun.style.display = 'inline';
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-
-        // Disable right-clicking
-        document.addEventListener('contextmenu', function(event) {
-            event.preventDefault();
-        });
     });
+
+    // Disable right-clicking
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+    });
+});
 </script>
 </body>
 </html>

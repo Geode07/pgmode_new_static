@@ -36,6 +36,7 @@
 
 /* Styling for SVG icons */
 .icon-button svg {
+  display: none; /* Hide all icons by default */
   width: 16px;
   height: 16px;
   fill: none; /* Ensure fill is none to use stroke color */
@@ -96,7 +97,6 @@
   color: #000; /* Change color on hover if desired */
 }
 
-
 .portfolio-card {
   margin: auto; /* Centers the card in the middle of the page */
   background-color: var(--secondary); /* Dynamic background based on theme */
@@ -115,8 +115,6 @@
 .portfolio-card:hover {
   box-shadow: var(--shadow-hover);
 }
-
-
 
 /* Container for the portfolio items */
 .portfolio-items {
