@@ -131,7 +131,7 @@
 
 .home-blurb {
   margin-bottom: 20px;
-  font-size: 26px;
+  font-size: 24px;
   text-align: center !important;  /* Force centering, use sparingly */
   font-style: italic;
   color: var(--home-title); 
