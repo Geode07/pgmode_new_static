@@ -1,6 +1,6 @@
 # Project Title
 
-A brief description of what this project does and who it's for.
+PGMoDE static site.
 
 ## Table of Contents
 
