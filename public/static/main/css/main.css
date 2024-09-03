@@ -1,0 +1,532 @@
+
+
+/* Center the navbar items */
+.container-fluid {
+    display: flex;
+    justify-content: center; /* This will center the children */
+    margin-top: 20px; 
+  }
+
+.row.justify-content-center.w-100 {
+    justify-content: center; 
+}
+
+.navbar-brand {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", Ubuntu, "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 58px; /* adjust as needed */
+    font-weight: bold;
+    color: var(--primary) !important;
+  }
+
+.navbar-brand:hover, .navbar-brand:focus {
+    color: var(--primary) !important; /* Adjust if you want a different hover color */
+}
+
+.navbar-subtitle {
+    font-size: 28px; /* Adjust as needed */
+    color: var(--primary) !important;
+}
+
+/* These 'icon' buttons ar for sun mooon */
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-nav {
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes any default padding, particularly on the left */
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 170px; /* Adjust as needed */
+}
+
+.nav-item {
+  margin-right: 20px; /* Adds space between each navigation item */
+  font-size: 12px;
+}
+
+.icon-button:hover, .icon-button:focus {
+  /* Add styles for hover/focus to indicate it's clickable */
+  opacity: 0.9;
+}
+
+
+
+.portfolio-card {
+  margin: auto; /* Centers the card in the middle of the page */
+  background-color: var(--secondary); /* Dynamic background based on theme */
+  border: 2px solid var(--border); /* Border color changes with theme */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the content respects the border radius */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  margin-bottom: 20px; 
+  min-width: 300px; /* Adjust the width as needed */
+  max-width: 470px; /* Adjust the width as needed */
+  box-shadow: var(--shadow-normal); /* Dynamic shadow based on theme */
+  transition: box-shadow 0.3s, background-color 0.3s, border-color 0.3s; /* Smooth transition for hover and theme change effects */
+}
+
+.portfolio-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+
+
+/* Container for the portfolio items */
+.portfolio-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 2-column grid */
+  gap: 20px; /* Adjust the space between grid items */
+  justify-content: center; /* This will center the grid within the container */
+  max-width: 660px; /* Example: adjust based on your design (sum of two cards' width plus gap) */
+  margin: auto; /* Centers the grid container in its parent */
+}
+
+/* Style adjustments for portfolio items to appear as cards */
+.portfolio-item {
+  background-color: var(--secondary);
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensures the content respects the border radius */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  max-width: 300px;
+}
+
+.portfolio-item h3 {
+  margin: 5px 0; /* Adjust spacing as needed */
+  font-size: 15px; /* Reduced font size for h3 */
+  text-align: center;
+}
+
+.portfolio-item p {
+  margin: 5px 0; /* Adjust spacing as needed */
+  font-size: 13px; /* Reduced font size for paragraph */
+}
+
+/* New container for title and description */
+.text-area {
+  padding: 5px; /* Space inside the border */
+}
+
+.portfolio-title {
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the value as needed */
+  font-size: 24px; /* Example font size */
+  font-style: bold;
+}
+
+.portfolio-blurb {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center !important;  /* Force centering, use sparingly */
+  font-style: italic;
+  max-width: 100%;
+  display: block;  /* Ensure it's a block-level element */
+  margin-left: auto;  /* Centering max-width element */
+  margin-right: auto;  /* Centering max-width element */
+}
+
+.home-blurb {
+  margin-bottom: 20px;
+  font-size: 26px;
+  text-align: center !important;  /* Force centering, use sparingly */
+  font-style: italic;
+  color: var(--home-title); 
+  max-width: 100%;
+  display: block;  /* Ensure it's a block-level element */
+  margin-left: auto;  /* Centering max-width element */
+  margin-right: auto;  /* Centering max-width element */
+}
+
+.home-image {
+  width: 100%; /* Adjust width as needed, or max-width for responsive design */
+  max-width: 600px; /* Example max width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes any bottom margin/gap */
+  margin: 20px auto; /* Center the image horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border-radius: 10px; /* Optional rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.home-image:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow for depth */
+}
+
+
+.custom-button {
+  text-align: center;
+  justify-content: center;
+}
+
+/* Use flexbox to center the card in the middle of the page */
+.container {
+    display: block; /* Change this from flex to block */
+    max-width: 768px; /* Optional: Set a max-width if desired */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding */
+}
+
+h1, a {
+  color: var(--primary) !important;
+}
+
+#login-title {
+  font-weight: bold; /* This will make the font bold */
+}
+
+.custom-p {
+  font-size: 16px; /* Approximates the default size of h5 */
+  font-weight: normal; /* Removes bold styling */
+}
+
+.custom-p-bottom {
+  font-size: 13px; /* Approximates the default size of h5 */
+  font-weight: normal; /* Removes bold styling */
+  margin-left: 20px;
+}
+
+.card {
+    max-width: 400px; /* Maximum width of the card */
+    width: 100%; /* Make the card take up to 100% of the container width */
+    margin: auto; /* This will help center the card if flexbox is not supported */
+  }
+  
+.separator {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+#google-sign-in-button::after {
+  content: '\00a0\00a0'; /* Two Unicode non-breaking spaces */
+}
+
+body {
+  background-color: var(--theme);
+  color: var(--primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", Ubuntu, "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* Set a default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  /* Buttons styling */
+.btn {
+    margin: 10px 0; /* Add space between buttons */
+
+  }
+
+.small-font-button {
+    font-size: 13px; /* Or whatever font size you desire */
+    color:beige !important;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 60%;
+  }
+
+:root {
+  --theme-light: rgb(212, 212, 212);
+  --entry-light: rgb(255, 245, 230);
+  --primary-light: rgb(40, 40, 40);
+  --secondary-light: rgb(195, 212, 101);
+  --tertiary-light: rgb(233, 193, 114);
+  --content-light: rgb(50, 50, 50);
+  --code-block-bg-light: rgb(28, 29, 33);
+  --code-bg-light: rgb(240, 240, 240);
+  --border-light: rgb(230, 230, 230);
+  --home-title-light: rgb(55, 55, 54);
+  --theme-dark: rgb(77, 77, 78);
+  --entry-dark: rgb(46, 46, 51);
+  --primary-dark: rgb(218, 218, 219);
+  --secondary-dark: rgb(50, 63, 80);
+  --tertiary-dark: rgb(233, 193, 114);
+  --content-dark: rgb(196, 196, 197);
+  --code-block-bg-dark: rgb(46, 46, 51);
+  --code-bg-dark: rgb(55, 56, 62);
+  --border-dark: rgb(51, 51, 51);
+  --home-title-dark: rgb(234, 216, 173);
+
+  /* Default to dark theme variables */
+  --primary: var(--primary-dark);
+  --theme: var(--theme-dark);
+  --secondary: var(--secondary-dark);
+  --tertiary: var(--tertiary-dark);
+  --content: var(--content-dark);
+  --code-block-bg: var(--code-block-bg-dark);
+  --code-bg: var(--code-bg-dark);
+  --border: var(--border-dark);
+}
+
+.light-mode {
+  --primary: var(--primary-light);
+  --theme: var(--theme-light);
+  --secondary: var(--secondary-light);
+  --tertiary: var(--tertiary-light);
+  --content: var(--content-light);
+  --code-block-bg: var(--code-block-bg-light);
+  --code-bg: var(--code-bg-light);
+  --border: var(--border-light);
+  --shadow-normal: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.4);
+  --home-title: var(--home-title-light);
+
+}
+
+.dark-mode {
+  --primary: var(--primary-dark);
+  --theme: var(--theme-dark);
+  --secondary: var(--secondary-dark);
+  --tertiary: var(--tertiary-dark);
+  --content: var(--content-dark);
+  --code-block-bg: var(--code-block-bg-dark);
+  --code-bg: var(--code-bg-dark);
+  --border: var(--border-dark);
+  --shadow-normal: 0 4px 8px rgba(255, 255, 255, 0.1);
+  --shadow-hover: 0 8px 16px rgba(255, 255, 255, 0.2);
+  --home-title: var(--home-title-dark);
+}
+
+.light-mode .btn-outline-dark {
+  color: var(--content); /* This will apply your dark mode text color */
+  opacity: 0.8;
+  border-color: var(--secondary-light);
+  background-color: var(--tertiary-light);
+  margin-left:16px;
+}
+
+.light-mode #logoutButton {
+  margin-left:16px;
+}
+
+/* If you want to specifically target only the outlined buttons, you can be more specific */
+.dark-mode .btn-outline-dark {
+  color: var(--content); /* This will apply your dark mode text color */
+  opacity: 0.8;
+  border-color: var(--secondary-dark);
+  background-color: var(--tertiary-dark);
+  margin-left:16px;
+}
+
+.dark-mode #logoutButton {
+  margin-left:16px;
+}
+
+/* If you want to specifically target only the outlined buttons, you can be more specific */
+.btn-outline-dark {
+  color: var(--content); /* This will apply your dark mode text color */
+  opacity: 0.8;
+  border-color: var(--secondary-dark);
+  background-color: var(--tertiary-dark);
+  margin-left:16px;
+}
+
+#logoutButton {
+  margin-left:16px;
+}
+
+.custom-card {
+  border-radius: 15px; /* Ensures cards themselves have rounded corners, if not already by Bootstrap */
+}
+
+.custom-card .table {
+  /* Ensures the table fits well within the card */
+  width: 100%; /* Makes sure the table uses the full width of the card */
+  border-collapse: collapse; /* Optional, for styling preferences */
+}
+
+.custom-card .table th {
+  font-size: 11px; /* Change to the desired size */
+  /* Other styles */
+}
+
+.custom-card .table td {
+  font-size: 11px; /* Change to the desired size */
+  /* Other styles */
+}
+
+.custom-card .table tbody {
+  font-size: 11px; /* Change to the desired size */
+  /* Other styles */
+}
+
+.custom-card .table th, .custom-card .table td {
+  padding: .5rem; /* Adjusts padding within table cells */
+}
+
+.custom-card-text {
+  font-size: 11px; /* Set the size of your font */
+  font-weight: normal; /* This will remove bold styling if it's inherited */
+  /* Add any additional styling you desire here */
+}
+
+
+/* Ensures rounded corners are visible if the table is the last child */
+.custom-card .card-body:last-child {
+  border-bottom-left-radius: calc(.375rem - 1px);
+  border-bottom-right-radius: calc(.375rem - 1px);
+}
+
+.custom-column {
+  /* Adjust the width as necessary */
+  min-width: 45%;
+  /* Optional: Add more custom styling here */
+}
+
+.contact-link {
+  color: lightskyblue !important;
+}
+
+.section-divider {
+  border: none; /* Removes the default border */
+  height: 1px; /* Sets the height of the line */
+  background-color: var(--border);
+  margin-top: 20px; /* Adds space above the line */
+  margin-bottom: 20px; /* Adds space below the line */
+}
+
+/* Adjust padding on the first table cell to avoid text wrapping under the icon */
+.custom-card .table td:first-child {
+  padding-left: 35px; /* Adjust the value to accommodate the icon width + some space */
+}
+
+/* Ensures rounded corners are visible if the table is the last child */
+.custom-card .card-body:last-child {
+  border-bottom-left-radius: calc(.375rem - 1px);
+  border-bottom-right-radius: calc(.375rem - 1px);
+}
+
+.pf-container {
+  min-height: 100vh;  // Ensures the container is at least the height of the viewport
+  overflow-y: auto;   // Adds scrolling to this container if the content exceeds its height
+  color: black !important;
+}
+
+.pf-app-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pf-app-list li {
+  color:black;
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.pf-app-list li:hover {
+  background-color: #e9ecef;
+}
+
+.control-panel {
+  border: 1px solid #ccc; /* Adds a light grey border */
+  padding: 10px; /* Adds space inside the panel */
+  margin: 10px auto; /* Centers the panel on the page and adds space around it */
+  width: 80%; /* Restrict the width to make it not span the entire screen */
+  margin-bottom: 2px;
+  line-height: 1.2;
+  max-width: 400px; /* Maximum width */
+  font-size: 12px;
+  color: black !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: Adds subtle shadow for depth */
+  background: rgb(213, 171, 87); /* Light grey background */
+  border-radius: 10px; /* Rounds the corners */
+  cursor: pointer;  /* Assuming you want it to look clickable */
+  border-bottom: 1px solid #ccc;  /* Optional: adds a subtle separator */
+  background-color: rgb(213, 171, 87); 
+}
+
+footer {
+  margin-top: 60px;
+  text-align: center;
+  background-color: none;
+  color: black;
+}
+
+@media (min-width: 475px) {
+  .main-content-container {
+    max-width: 100%;
+  }
+
+  .home-blurb {
+    max-width: 90%;
+  }
+
+  .portfolio-blurb {
+    max-width: 80%;
+  }
+
+}
+
+@media (min-width: 576px) {
+  .main-content-container {
+    max-width: 100%;
+  }
+
+  .home-blurb {
+    max-width: 90%;
+  }
+
+  .portfolio-blurb {
+    max-width: 90%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .main-content-container {
+    max-width: 100%;
+  }
+
+  .home-blurb {
+    max-width: 50%;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .main-content-container {
+    max-width: 100%;
+  }
+
+  .home-blurb {
+    max-width: 50%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .main-content-container {
+    max-width: 100%;
+  }
+
+  .home-blurb {
+    max-width: 50%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .main-content-container {
+    max-width: 100%;;
+  }
+
+  .home-blurb {
+    max-width: 30%;
+  }
+
+}
+

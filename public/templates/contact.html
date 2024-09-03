@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}  <!-- This retains any content from the head block of the base template -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/main/css/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+<section id="contact" class="section section--contact pt-0">
+    <div class="form-container">
+        <!-- Inserting static text -->
+        <h2>Contact Us</h2>
+        <h4>Please fill out the information and we will respond promptly.</h4>
+        <!-- Inserting dynamic text -->
+        <div class="contact", style="margin-top: 20px;"></div>
+            <div class="row pt-2">
+                <div class="col-12 col-lg-7">
+                    <form action="{{ contact_config['form']['action'] }}" method="{{ contact_config['form']['method'] }}">
+                        <div class="row pt-4">
+                            <div class="col-12">
+                                <input type="text" name="full_name" id="full_name"
+                                       placeholder="{{ contact_config['form']['full_name_placeholder'] }}" required/>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12">
+                                <input type="email" name="email" id="email"
+                                       placeholder="{{ contact_config['form']['email_placeholder'] }}" required/>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12">
+                                <textarea name="message" id="message" cols="30" rows="3"
+                                          placeholder="{{ contact_config['form']['message_placeholder'] }}" required></textarea>
+                            </div>
+                        </div>
+                        <div class="row pt-4">
+                            <div class="col-12">
+                                <input type="hidden" name="_subject" value="New submission from your-site-name!">
+                                <button type="submit" class="btn btn-secondary send-button" style="color: black;">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+

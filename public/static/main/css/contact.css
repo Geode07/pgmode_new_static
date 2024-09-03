@@ -1,0 +1,129 @@
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Comfortable padding */
+    margin-bottom: 15px; /* Space between fields */
+    color: #ccc; /* Light text color */
+    border: 1px solid #ccc; /* Visible border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Highlight color when focused */
+    outline: none; /* Remove default focus outline */
+}
+
+
+
+.form-container {
+    width: 100%; /* Adjust the width of the form container */
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks children elements vertically */
+    align-items: center; /* Center aligns child elements horizontally */
+    margin-top: 40px;
+    
+}
+
+.contact-form {
+    width: 100%; /* Full width of the container */
+    max-width: 500px; /* Maximum width of the form */
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%; /* Full width inputs and textareas */
+    padding: 10px;
+    margin: 10px 0; /* Margin for top and bottom */
+}
+
+.contact-form button {
+    width: auto; /* Allows the button to shrink/grow as needed */
+    padding: 10px 20px; /* Comfortable padding */
+}
+
+.light-mode .send-button {
+    background-color: var(--tertiary);  /* Set the button background color */
+    color: var(--content);             /* Optionally set the text color */
+    border: 1px solid var(--border);   /* Optionally set the border color */
+}
+
+.send-button:hover {
+    border-color: #007bff; /* Highlight color when hovering */
+    outline: none; /* Remove default outline to maintain consistency */
+}
+
+
+
+@media (min-width: 475px) {
+    .form-container {
+        width: 90%; /* Restrict width on larger screens */
+        margin: 40px auto; /* Increase margin on top and bottom */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        min-width: 250px;
+    }
+    
+  }
+  
+  @media (min-width: 576px) {
+    .form-container {
+        width: 85%; /* Restrict width on larger screens */
+        margin: 40px auto; /* Increase margin on top and bottom */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        min-width: 250px;
+    }
+    
+  }
+  
+  @media (min-width: 769px) {
+    .form-container {
+        width: 80%; /* Restrict width on larger screens */
+        margin: 40px auto; /* Increase margin on top and bottom */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        min-width: 250px;
+    }
+}
+
+@media (min-width: 992px) {
+    .form-container {
+        width: 70%; /* Further restrict width on very large screens */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+    }
+}
+  
+  @media (min-width: 1024px) {
+    .form-container {
+        width: 60%; /* Further restrict width on very large screens */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+    }
+    
+  }
+  
+  @media (min-width: 1200px) {
+    .form-container {
+        width: 50%; /* Further restrict width on very large screens */
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+    }
+    
+}
+
+
