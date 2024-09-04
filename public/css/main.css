@@ -3,9 +3,13 @@
 /* Center the navbar items */
 .container-fluid {
   display: flex;
-  flex-direction: column; /* Stacks the children vertically */
-  justify-content: center; /* This centers them vertically (if needed) */
-  align-items: center; /* This centers them horizontally */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-fluid.flex-column {
+  flex-direction: column;
+  justify-content: center;
 }
 
 .row.justify-content-center.w-100 {
@@ -17,7 +21,7 @@
     font-size: 38px; /* adjust as needed */
     font-weight: bold;
     color: var(--primary) !important;
-    padding-bottom: 0;
+    margin-bottom: 0px; /* Reduced space between title and subtitle */
     text-align: center;
   }
 
@@ -29,6 +33,7 @@
     font-size: 18px; /* Adjust as needed */
     color: var(--primary) !important;
     text-align: center;
+    margin-top: 5px; /* Removed extra space above subtitle */
     margin-bottom: 10px;
 }
 
@@ -37,6 +42,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  margin-left: auto; /* Moves the icon to the far right */
 }
 
 /* Styling for SVG icons */
@@ -77,13 +83,16 @@
   opacity: 0.9;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Spread links and icon */
+  align-items: center; /* Aligns the icon with the links */
+  width: 100%;
+}
 
 .navbar-nav {
-  list-style: none; /* Removes bullet points */
-  padding: 0; /* Removes any default padding, particularly on the left */
   display: flex;
-  flex-wrap: nowrap;
-  min-width: 170px; /* Adjust as needed */
+  gap: 20px; /* Space between navigation links */
 }
 
 .nav-item {
@@ -100,6 +109,11 @@
 .navbar-nav .nav-link:hover {
   text-decoration: none; /* Ensure underline doesn't appear on hover */
   color: #000; /* Change color on hover if desired */
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px; /* Space between the links */
 }
 
 .portfolio-card {
