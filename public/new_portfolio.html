@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your website's description here for SEO.">
+    <meta name="keywords" content="keyword1, keyword2">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    
+
+    
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="container-fluid title-container">
+    <a class="navbar-brand" href="https://pgmode.com">PGMoDE</a>
+    <div class="navbar-subtitle">Experience Analytics</div>
+</div>
+<!-- Navbar Links and Icon in a separate container removed -->
+<div class="navbar-container">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="https://pgmode.com">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/new_portfolio.html">Our Work</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+        </li>
+    </ul>
+
+    <!-- Theme toggle button, 15px to the right of the last link -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" class="icon-button" accesskey="t" title="(Alt + T)">
+            <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="container mt-3">
+    <p class="portfolio-blurb" style="color:rgb(255, 245, 230)" >Below are examples of our work.</p>
+    <div class="row row-cols-1 row-cols-md-2 g-4">  <!-- Creates a responsive 2x2 grid -->
+        <div class="col-md-6 d-flex justify-content-center">
+            <div class="portfolio-card">
+                <div class="card-header" style="text-align: center">
+                    <h3 class="card-title text-center" style="margin-bottom: 10px">Customer Experience</h3>
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-text text-center" style="text-align: center">Improve Customer Engagement and Accelerate Technology Adoption</h4>
+                    <h6 class="mb-2" style="margin-top: 20px; margin-bottom: 10px; margin-left: 40px; margin-right: 40px; font-size: 14px;">Raising the level of participation in your sustainability initiatives requires compelling stories and tools that simplify kitchen-table decisions</h6>
+                    <h6 class="mb-2" style="margin-bottom:20px; margin-left: 40px; margin-right: 40px; font-size: 13px;">Our Services: Customer engagement apps and program reporting. Technology diffusion, customer journey modeling.</h5>
+
+
+                </div>
+                <div> <!-- Wrapping each button in a div -->
+                    <img src="images/seis_sd.png" class="card-img-top"  alt="CX Image" style="width: 90%; height: auto; margin: 0 auto 10px auto; display: block;">
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="card-header" style="text-align: center">
+                    <h3 class="card-title text-center" style="margin-bottom: 10px">Process Management</h3>
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-text text-center" style="text-align: center">Optimize Process Efficiency and Transparency</h4>
+                    <h6 class="card-subtitle mb-2" style="margin-top: 20px; margin-bottom: 10px; margin-left: 40px; margin-right: 40px; font-size: 14px;">Processes now span the cloud, media, and bots, generating a data tsunami. Stakeholders expect processes to be controlled, coherent, and improving</h6>
+                    <h6 class="mb-2" style="margin-bottom:20px; margin-left: 40px; margin-right: 40px; font-size: 13px;">Our Services: Bottleneck discovery and removal for humans and bots. Audit prep automation.</h5>
+
+
+                </div>
+                <div> <!-- Wrapping each button in a div -->
+                    <img src="images/path_entropy.png" class="card-img-top"  alt="CX Image" style="width: 90%; height: auto; margin: 0 auto 10px auto; display: block;">
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="card-header" style="text-align: center">
+                    <h3 class="card-title text-center" style="margin-bottom: 10px">Planning and Asset Management</h3>
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-text text-center" style="text-align: center">Optimize Asset Cycle Life and Maintenance</h4>
+                    <h6 class="card-subtitle mb-2" style="margin-top: 20px; margin-bottom: 10px; margin-left: 40px; margin-right: 40px; font-size: 14px;">Asset management is critical to the energy transition. Challenges include integrating new construction, increased asset cycling, and equipment heterogeneity.</h6>
+                    <h6 class="mb-2" style="margin-bottom:20px; margin-left: 40px; margin-right: 40px; font-size: 13px;">Our Services: Asset cycle life and service performance analytics. Built on asset, operations, geospatial, and weather data.</h5>
+
+
+                </div>
+                <div> <!-- Wrapping each button in a div -->
+                    <img src="images/lc_light.png" class="card-img-top"  alt="CX Image" style="width: 90%; height: auto; margin: 0 auto 10px auto; display: block;">
+                </div>
+            </div>
+            <div class="portfolio-card">
+                <div class="card-header" style="text-align: center">
+                    <h3 class="card-title text-center" style="margin-bottom: 10px">Decision Making</h3>
+                </div>
+                
+                <div class="card-body">
+                    <h5 class="card-text text-center" style="text-align: center">Optimize Asset Cycle Life and Maintenance</h4>
+                    <h6 class="card-subtitle mb-2" style="margin-top: 20px; margin-bottom: 10px; margin-left: 40px; margin-right: 40px; font-size: 14px;">As change accelerates, a feedback loop is needed to improve decision making. We incorporate What-If thinking with causal inference, counterfactuals, and probabilistic models</h6>
+                    <h6 class="mb-2" style="margin-bottom:20px; margin-left: 40px; margin-right: 40px; font-size: 13px;">Our Services: Causal modeling and decision support automation. Interactive investment visualization for diverse stakeholders.
+                </div>
+                <div> <!-- Wrapping each button in a div -->
+                    <img src="images/cf_light.png" class="card-img-top"  alt="CX Image" style="width: 90%; height: auto; margin: 0 auto 10px auto; display: block;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <p style="margin-top: 140px; font-size: 12px;">© 2024 PGMoDE. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeToggle = document.getElementById('theme-toggle');
+        const moon = document.getElementById('moon');
+        const sun = document.getElementById('sun');
+        const body = document.body;
+
+        // Check local storage for theme preference
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            body.classList.remove('light-mode');
+            moon.style.display = 'none';
+            sun.style.display = 'inline';
+        } else if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+            body.classList.remove('dark-mode');
+            moon.style.display = 'inline';
+            sun.style.display = 'none';
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', function() {
+            if (body.classList.contains('dark-mode')) {
+                body.classList.add('light-mode');
+                body.classList.remove('dark-mode');
+                moon.style.display = 'inline';
+                sun.style.display = 'none';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark-mode');
+                body.classList.remove('light-mode');
+                moon.style.display = 'none';
+                sun.style.display = 'inline';
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Disable right-clicking
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+    });
+</script>
+</body>
+</html>
